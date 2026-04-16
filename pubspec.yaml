@@ -1,0 +1,352 @@
+name: tafseer_app
+description: A new Flutter app.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.1
+
+environment:
+  sdk: '>=3.1.0-113.0.dev <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  youtube_player_iframe: ^5.2.2
+  cached_network_image: ^3.1.0
+  #  webview_flutter: ^0.3.19+8
+  chewie: ^1.3.0
+#  firebase_analytics: ^10.4.2
+#  wakelock: ^0.6.1
+  flutter_secure_storage: ^10.0.0
+  video_player: ^2.10.1
+  bloc: ^9.1.0
+  equatable: ^2.0.5
+  flutter_cache_manager: ^3.0.0
+  pedantic: ^1.8.0+1
+#  audioplayers: ^0.19.1
+  assets_audio_player: ^3.0.6
+  just_audio: ^0.10.5
+  audio_video_progress_bar: ^2.0.1
+  external_app_launcher: ^4.0.3
+  wakelock_plus: ^1.2.8
+
+  #  flutter_local_notifications: ^10.0.0
+#  firebase_messaging: ^14.6.2
+  share_plus: ^12.0.1
+
+
+  meta: any
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo.png"
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - lib/images/drawer_header.jpg
+    - lib/images/home_bg.jpg
+    - lib/images/0.png
+    - lib/images/1.png
+    - lib/images/2.png
+    - lib/images/3.png
+    - assets/details.json
+    - assets/details_copy.json
+    - assets/address.json
+    - lib/images/white_arrow.png
+    - lib/images/hadees.png
+    - lib/images/day.png
+    - lib/images/lectures.png
+    - lib/images/info.png
+    - lib/images/kids.png
+    - lib/images/quran_recite.png
+    - lib/images/tafseer.png
+    - lib/images/nisaab.png
+    - lib/images/dictionary.png
+    - lib/images/khuddamLogo.jpeg
+    - assets/audio_files.json
+    - assets/hadees_details.json
+    - assets/muntakhib_nisaab.json
+    - assets/surah_list_reading.json
+    - assets/verses/1.json
+    - assets/verses/2.json
+    - assets/verses/3.json
+    - assets/verses/4.json
+    - assets/verses/5.json
+    - assets/verses/6.json
+    - assets/verses/7.json
+    - assets/verses/8.json
+    - assets/verses/9.json
+    - assets/verses/10.json
+    - assets/verses/11.json
+    - assets/verses/12.json
+    - assets/verses/13.json
+    - assets/verses/14.json
+    - assets/verses/15.json
+    - assets/verses/16.json
+    - assets/verses/17.json
+    - assets/verses/18.json
+    - assets/verses/19.json
+    - assets/verses/20.json
+    - assets/verses/21.json
+    - assets/verses/22.json
+    - assets/verses/23.json
+    - assets/verses/24.json
+    - assets/verses/25.json
+    - assets/verses/26.json
+    - assets/verses/27.json
+    - assets/verses/28.json
+    - assets/verses/29.json
+    - assets/verses/30.json
+    - assets/verses/31.json
+    - assets/verses/32.json
+    - assets/verses/33.json
+    - assets/verses/34.json
+    - assets/verses/35.json
+    - assets/verses/36.json
+    - assets/verses/37.json
+    - assets/verses/38.json
+    - assets/verses/39.json
+    - assets/verses/40.json
+    - assets/verses/41.json
+    - assets/verses/42.json
+    - assets/verses/43.json
+    - assets/verses/44.json
+    - assets/verses/45.json
+    - assets/verses/46.json
+    - assets/verses/47.json
+    - assets/verses/48.json
+    - assets/verses/49.json
+    - assets/verses/50.json
+    - assets/verses/51.json
+    - assets/verses/52.json
+    - assets/verses/53.json
+    - assets/verses/54.json
+    - assets/verses/55.json
+    - assets/verses/56.json
+    - assets/verses/57.json
+    - assets/verses/58.json
+    - assets/verses/59.json
+    - assets/verses/60.json
+    - assets/verses/61.json
+    - assets/verses/62.json
+    - assets/verses/63.json
+    - assets/verses/64.json
+    - assets/verses/65.json
+    - assets/verses/66.json
+    - assets/verses/67.json
+    - assets/verses/68.json
+    - assets/verses/69.json
+    - assets/verses/70.json
+    - assets/verses/71.json
+    - assets/verses/72.json
+    - assets/verses/73.json
+    - assets/verses/74.json
+    - assets/verses/75.json
+    - assets/verses/76.json
+    - assets/verses/77.json
+    - assets/verses/78.json
+    - assets/verses/79.json
+    - assets/verses/80.json
+    - assets/verses/81.json
+    - assets/verses/82.json
+    - assets/verses/83.json
+    - assets/verses/84.json
+    - assets/verses/85.json
+    - assets/verses/86.json
+    - assets/verses/87.json
+    - assets/verses/88.json
+    - assets/verses/89.json
+    - assets/verses/90.json
+    - assets/verses/91.json
+    - assets/verses/92.json
+    - assets/verses/93.json
+    - assets/verses/94.json
+    - assets/verses/95.json
+    - assets/verses/96.json
+    - assets/verses/97.json
+    - assets/verses/98.json
+    - assets/verses/99.json
+    - assets/verses/100.json
+    - assets/verses/101.json
+    - assets/verses/102.json
+    - assets/verses/103.json
+    - assets/verses/104.json
+    - assets/verses/105.json
+    - assets/verses/106.json
+    - assets/verses/107.json
+    - assets/verses/108.json
+    - assets/verses/109.json
+    - assets/verses/110.json
+    - assets/verses/111.json
+    - assets/verses/112.json
+    - assets/verses/113.json
+    - assets/verses/114.json
+    - assets/verses_en/1.json
+    - assets/verses_en/2.json
+    - assets/verses_en/3.json
+    - assets/verses_en/4.json
+    - assets/verses_en/5.json
+    - assets/verses_en/6.json
+    - assets/verses_en/7.json
+    - assets/verses_en/8.json
+    - assets/verses_en/9.json
+    - assets/verses_en/10.json
+    - assets/verses_en/11.json
+    - assets/verses_en/12.json
+    - assets/verses_en/13.json
+    - assets/verses_en/14.json
+    - assets/verses_en/15.json
+    - assets/verses_en/16.json
+    - assets/verses_en/17.json
+    - assets/verses_en/18.json
+    - assets/verses_en/19.json
+    - assets/verses_en/20.json
+    - assets/verses_en/21.json
+    - assets/verses_en/22.json
+    - assets/verses_en/23.json
+    - assets/verses_en/24.json
+    - assets/verses_en/25.json
+    - assets/verses_en/26.json
+    - assets/verses_en/27.json
+    - assets/verses_en/28.json
+    - assets/verses_en/29.json
+    - assets/verses_en/30.json
+    - assets/verses_en/31.json
+    - assets/verses_en/32.json
+    - assets/verses_en/33.json
+    - assets/verses_en/34.json
+    - assets/verses_en/35.json
+    - assets/verses_en/36.json
+    - assets/verses_en/37.json
+    - assets/verses_en/38.json
+    - assets/verses_en/39.json
+    - assets/verses_en/40.json
+    - assets/verses_en/41.json
+    - assets/verses_en/42.json
+    - assets/verses_en/43.json
+    - assets/verses_en/44.json
+    - assets/verses_en/45.json
+    - assets/verses_en/46.json
+    - assets/verses_en/47.json
+    - assets/verses_en/48.json
+    - assets/verses_en/49.json
+    - assets/verses_en/50.json
+    - assets/verses_en/51.json
+    - assets/verses_en/52.json
+    - assets/verses_en/53.json
+    - assets/verses_en/54.json
+    - assets/verses_en/55.json
+    - assets/verses_en/56.json
+    - assets/verses_en/57.json
+    - assets/verses_en/58.json
+    - assets/verses_en/59.json
+    - assets/verses_en/60.json
+    - assets/verses_en/61.json
+    - assets/verses_en/62.json
+    - assets/verses_en/63.json
+    - assets/verses_en/64.json
+    - assets/verses_en/65.json
+    - assets/verses_en/66.json
+    - assets/verses_en/67.json
+    - assets/verses_en/68.json
+    - assets/verses_en/69.json
+    - assets/verses_en/70.json
+    - assets/verses_en/71.json
+    - assets/verses_en/72.json
+    - assets/verses_en/73.json
+    - assets/verses_en/74.json
+    - assets/verses_en/75.json
+    - assets/verses_en/76.json
+    - assets/verses_en/77.json
+    - assets/verses_en/78.json
+    - assets/verses_en/79.json
+    - assets/verses_en/80.json
+    - assets/verses_en/81.json
+    - assets/verses_en/82.json
+    - assets/verses_en/83.json
+    - assets/verses_en/84.json
+    - assets/verses_en/85.json
+    - assets/verses_en/86.json
+    - assets/verses_en/87.json
+    - assets/verses_en/88.json
+    - assets/verses_en/89.json
+    - assets/verses_en/90.json
+    - assets/verses_en/91.json
+    - assets/verses_en/92.json
+    - assets/verses_en/93.json
+    - assets/verses_en/94.json
+    - assets/verses_en/95.json
+    - assets/verses_en/96.json
+    - assets/verses_en/97.json
+    - assets/verses_en/98.json
+    - assets/verses_en/99.json
+    - assets/verses_en/100.json
+    - assets/verses_en/101.json
+    - assets/verses_en/102.json
+    - assets/verses_en/103.json
+    - assets/verses_en/104.json
+    - assets/verses_en/105.json
+    - assets/verses_en/106.json
+    - assets/verses_en/107.json
+    - assets/verses_en/108.json
+    - assets/verses_en/109.json
+    - assets/verses_en/110.json
+    - assets/verses_en/111.json
+    - assets/verses_en/112.json
+    - assets/verses_en/113.json
+    - assets/verses_en/114.json
+
+
+  fonts:
+      - family: naskhregular
+        fonts:
+          - asset: assets/AlMajeed.ttf
+            style: normal
+      - family: urdu
+        fonts:
+          - asset: assets/PDMS_Saleem_QuranFont.ttf
+            style: normal
