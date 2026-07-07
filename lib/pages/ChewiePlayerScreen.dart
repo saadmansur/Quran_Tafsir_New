@@ -88,7 +88,7 @@ class _ChewieDemoState extends State<ChewieDemo> {
 
   Future<void> initializePlayer() async {
     _videoPlayerController1 =
-        VideoPlayerController.network(widget.surah.ytLink);
+        VideoPlayerController.networkUrl(Uri.parse(widget.surah.ytLink));
     await Future.wait([
       _videoPlayerController1.initialize(),
     ]);

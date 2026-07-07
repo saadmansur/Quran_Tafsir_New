@@ -35,10 +35,25 @@ class _MyHomePageState extends State<AudioPlayerPageNew> {
     super.initState();
     _audioPlayer = AudioPlayer();
     _positionStream = _audioPlayer.positionStream;
-    _durationStream = (_audioPlayer.durationStream);
-    _audioPlayer.setAudioSource(AudioSource.uri(Uri.parse(
-        widget.surah.ytLink)));
-    _audioPlayer.play();
+    _durationStream = _audioPlayer.durationStream;
+    _audioPlayer.playbackEventStream.listen(
+      (event) {},
+      onError: (Object e, StackTrace st) {
+        debugPrint('Audio playback error: $e');
+      },
+    );
+    _initAudioSource();
+  }
+
+  Future<void> _initAudioSource() async {
+    try {
+      await _audioPlayer.setAudioSource(
+        AudioSource.uri(Uri.parse(widget.surah.ytLink)),
+      );
+      await _audioPlayer.play();
+    } catch (e) {
+      debugPrint('Error loading audio source: $e');
+    }
   }
 
   @override
@@ -176,14 +191,17 @@ class _MyHomePageState extends State<AudioPlayerPageNew> {
                     stream: _audioPlayer.playerStateStream,
                     builder: (context, snapshot) {
                       final processingState = snapshot.data?.processingState;
-                      final playing = snapshot.data?.playing;
-                      // if (playing != true) {
+                      if (processingState == ProcessingState.loading ||
+                          processingState == ProcessingState.buffering) {
+                        return const CircularProgressIndicator(color: Colors.green);
+                      }
+                      final playing = snapshot.data?.playing ?? false;
                       return CircleAvatar(
                           radius: 30,
                           backgroundColor: Colors.white,
                           child: IconButton(
                               icon: Icon(
-                                snapshot.data!.playing ? Icons.pause : Icons.play_arrow,
+                                playing ? Icons.pause : Icons.play_arrow,
                                 color: Colors.green,
                               ),
                               iconSize: 45,
